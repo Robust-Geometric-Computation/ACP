@@ -1,0 +1,5 @@
+# minXYZ and maxXYZ
+2
+
+-1 -1 -1
+1 1 1

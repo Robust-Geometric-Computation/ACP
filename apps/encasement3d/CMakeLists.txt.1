@@ -1,0 +1,12 @@
+add_executable(encasement3d_getRoots_test encasement3d_getRoots_test.cc)
+
+target_link_libraries(encasement3d_getRoots_test
+    acp
+    object
+    encasement_utils
+    poly3d
+)
+
+target_link_libraries(encasement3d_getRoots_test
+    ${LAPACK_LIBRARIES}
+)

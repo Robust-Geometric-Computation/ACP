@@ -1,0 +1,7 @@
+add_subdirectory(descartes)
+add_subdirectory(encasement2d)
+add_subdirectory(encasement3d)
+add_subdirectory(poly)
+add_subdirectory(sonar)
+add_subdirectory(sweep)
+add_subdirectory(visualization)

@@ -1,0 +1,56 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+
+KEY_V : Regrids without changing model matrix.
+	 Applying PVM_Inverse to the original f(x,y,z) so PVM * PVM_inverse * f  ---> f
+
+
+Associated functions: 
+
+vregrid()  in viz3d.cc
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+
+KEY_N : saves the model 4x4 matrix to poses2.txt.  NOTE, the matrices in this file are the transpose of
+	 the actual matrices that the model M matrix contains in ACP.
+	  The program is set up to transpose them back when taken as input. 
+
+Associated functions:
+
+Playback::recordCurrentPose(filename)   in Playback.cc
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+KEY_M : reads poses from poses.txt using a Playback object. 
+	Playback is defined in Playback.cc and used in viz3d.cc
+
+
+Associated functions:
+
+main_interpolate() in viz3d.cc  
+		                (this is called during runtime, all of
+		                 the calculations are handled in Playback::interpolate() )
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+KEY_G : restores to the original poly, drawer.M is set to I.
+
+Associated functions:
+
+restorePoly()	in viz3d.cc
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+KEY_B : plays the whole pose file without pausing.
+
+Associated functions:
+main_interpolate() in viz3d.cc (this is the same function used by KEY_M, 
+				the difference is that a bool variable is set to TRUE in the Playback object
+				 so that it keeps interpolating until the end of the file.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -1,0 +1,16 @@
+*~
+.#*
+*.bak
+.swp
+.vscode
+
+*.pdf
+*.png
+*.vtp
+*.vtk
+
+/build*
+/.idea
+/cmake-*
+/rel_with_debug*
+
