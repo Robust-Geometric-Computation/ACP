@@ -39,7 +39,7 @@ liblapack-dev liblapacke-dev libfreetype6-dev libpng-dev libpng16-16 libzip4
 
   `cmake -S . -B build`
 
-  `cmake --build build -j --target=surface_visualization_vtk`
+  `cmake --build build -j --target surface_visualization_vtk`
 
   # Examples
   ## 4 Spheres
