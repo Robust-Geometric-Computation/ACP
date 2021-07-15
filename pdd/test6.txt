@@ -1,0 +1,19 @@
+exp6.tgz contains the full source for experiment 6, so it has copies of these files.
+
+make randomtest
+./randomtest
+
+Edit the top of angle.h to select the identity detection method.  Right now it is set to perturbation (homotopy):
+
+//#define TABLE_IDENTITY
+//#define GCD_IDENTITY
+//#define RESIDUE_IDENTITY1
+//#define RESIDUE_IDENTITY2
+#define HOMOTOPY_IDENTITY
+
+Note that the folder has the two txt files containing the tables.
+
+HOMOTOPY_IDENTITY: n = 1 homotopy
+no defines: n = 2 homotopy
+residue1: n = 1 residue
+residue2: m = 2 residue

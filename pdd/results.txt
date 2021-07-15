@@ -1,0 +1,421 @@
+TEST 1
+
+charlotte 92 % test1 ex/cube.vtk ex/glacier.vtk ex/sphere.vtk 
+max precision used = 212
+minimum size: 6.53402; cpu time: 29.726
+
+ACP statistics
+p = 38821809 a = 8.578708 d = 97.4 t = 10.8399 f = 79.79848 m = 13.13943
+e = 7.075807
+
+charlotte 93 % test1 ex/glacier.vtk ex/glacier.vtk ex/glacier.vtk 
+max precision used = 212
+minimum size: 9.23856; cpu time: 23.826
+
+ACP statistics
+p = 35100298 a = 9.467167 d = 93.17178 t = 10.94556 f = 72.44272 m = 14.85126
+e = 12.70601
+
+charlotte 94 % test1 ex/glacier.vtk ex/sphere.vtk ex/sphere.vtk 
+max precision used = 212
+minimum size: 6.53402; cpu time: 48.6193
+
+ACP statistics
+p = 49318249 a = 9.057758 d = 76.38818 t = 18.33889 f = 60.28028 m = 18.9363
+e = 20.7834
+
+charlotte 95 % test1 ex/sphere.vtk ex/sphere.vtk ex/sphere.vtk 
+max precision used = 424
+heuristic failed
+minimum size: 4.22308; cpu time: 663.854
+
+ACP statistics
+p = 901927568 a = 7.72597 d = 78.78533 t = 274.4112 f = 65.68173 m = 17.75222
+e = 16.56603
+
+Exact Rational Evaluation
+
+charlotte 161 % test1 ex/cube.vtk ex/glacier.vtk ex/sphere.vtk 
+minimum size: 6.53402; cpu time: 126.767
+
+ACP statistics
+p = 38785319 a = 8.745816 d = 97.4 t = 107.4511 f = 8.9192 m = 91.08079
+e = 0 b = 5307
+
+charlotte 162 % test1 ex/glacier.vtk ex/glacier.vtk ex/glacier.vtk 
+minimum size: 9.23856; cpu time: 157.821
+
+ACP statistics
+p = 35017484 a = 9.515369 d = 93.1 t = 144.8665 f = 6.187042 m = 93.81295
+e = 0 b = 13925
+
+charlotte 163 % test1 ex/glacier.vtk ex/sphere.vtk ex/sphere.vtk 
+minimum size: 6.53402; cpu time: 96.0879
+
+ACP statistics
+p = 49435728 a = 9.526063 d = 76.4 t = 66.77052 f = 18.99184 m = 81.00815
+e = 0 b = 3484
+
+charlotte 164 % test1 ex/sphere.vtk ex/sphere.vtk ex/sphere.vtk 
+minimum size: 4.22308; cpu time: 1901.43
+
+ACP statistics
+p = 373684541 a = 11.30988 d = 78.8 t = 1689.183 f = 6.260202 m = 93.73979
+e = 0 b = 9362
+charlotte 94 % tetrahedrons 1404909 fenced 0 sliver 246 cpu time 2410
+
+-------------------------------------------------------------------
+
+TEST 2
+
+charlotte 92 % test2 ex/bull.vtk 
+faces 67817 cpu time 1.62582
+
+ACP statistics
+p = 2635817 a = 0.6876425 d = 97.64965 t = 0.4796373 f = 95.44092 m = 2.437982
+e = 2.121093
+
+charlotte 93 % test2 ex/ear.vtk 
+faces 141393 cpu time 4.06469
+
+ACP statistics
+p = 6286587 a = 0.08007524 d = 98.21215 t = 1.137001 f = 99.50527 m = 0.3027724
+e = 0.1919508
+
+charlotte 94 % test2 ex/horse.vtk 
+faces 169804 cpu time 5.14692
+
+ACP statistics
+p = 7550073 a = 0.07125758 d = 98.73605 t = 1.397366 f = 99.64306 m = 0.2499069
+e = 0.1070298
+
+Exact Rational Evaluation
+
+charlotte 100 % test2 ex/bull.vtk 
+faces 67817 cpu time 1.75863
+
+ACP statistics
+p = 2636737 a = 0.6874026 d = 97.65517 t = 0.610012 f = 75.26014 m = 24.73985
+e = 0 b = 1064
+
+charlotte 101 % test2 ex/ear.vtk 
+faces 141393 cpu time 4.09236
+
+ACP statistics
+p = 6286753 a = 0.08004131 d = 98.21144 t = 1.171796 f = 96.52737 m = 3.472624
+e = 0 b = 942
+
+charlotte 102 % test2 ex/horse.vtk 
+faces 169804 cpu time 5.17613
+
+ACP statistics
+p = 7550019 a = 0.07127134 d = 98.73629 t = 1.431055 f = 97.03337 m = 2.966621
+e = 0 b = 921
+
+-------------------------------------------------------------------
+
+TEST 3
+
+charlotte 95 % test3 ex/glacier.vtk ex/bull.vtk 
+max precision used = 212
+faces 1296570 cpu time 37.1084
+
+ACP statistics
+p = 28731775 a = 2.046333 d = 76.66103 t = 11.5582 f = 63.11221 m = 8.952867
+e = 27.93492
+
+charlotte 96 % test3 ex/glacier.vtk ex/ear.vtk 
+max precision used = 212
+faces 2129510 cpu time 73.8984
+
+ACP statistics
+p = 54554552 a = 1.494885 d = 50.76465 t = 26.18697 f = 53.43368 m = 8.601053
+e = 37.96526
+
+charlotte 97 % test3 ex/glacier.vtk ex/horse.vtk 
+max precision used = 212
+faces 3694139 cpu time 112.616
+
+ACP statistics
+p = 109048968 a = 0.9830491 d = 69.077 t = 34.22809 f = 70.18231 m = 6.808467
+e = 23.00921
+
+Exact Rational Evaluation
+
+charlotte 104 % test3 ex/glacier.vtk ex/bull.vtk 
+faces 1289191 cpu time 138.449
+
+ACP statistics
+p = 28501770 a = 2.085807 d = 76.66225 t = 110.8104 f = 6.981973 m = 93.01802
+e = 0 b = 4362
+
+charlotte 105 % test3 ex/glacier.vtk ex/ear.vtk 
+faces 2013078 cpu time 174.591
+
+ACP statistics
+p = 49006696 a = 1.300848 d = 64.06542 t = 131.0233 f = 9.514544 m = 90.48545
+e = 0 b = 4373
+
+charlotte 106 % test3 ex/glacier.vtk ex/horse.vtk 
+faces 3694880 cpu time 290.176
+
+ACP statistics
+p = 109304875 a = 1.008067 d = 69.72856 t = 205.3399 f = 12.2726 m = 87.72739
+e = 0 b = 4429
+
+-------------------------------------------------------------------
+
+TEST 4
+
+charlotte 109 % test4 ex/bull.vtk 
+tetrahedrons 363178 fenced 19 sliver 240 cpu time 34.6749
+
+ACP statistics
+p = 45512453 a = 2.769042 d = 91.64362 t = 12.89886 f = 83.01069 m = 6.366464
+e = 10.62284
+
+charlotte 110 % test4 ex/ear.vtk 
+tetrahedrons 1408824 fenced 0 sliver 205 cpu time 166.87
+
+ACP statistics
+p = 193696320 a = 2.038576 d = 94.55752 t = 50.6484 f = 90.0375 m = 3.895526
+e = 6.066968
+
+charlotte 111 % test4 ex/horse.vtk 
+tetrahedrons 784600 fenced 74 sliver 41 cpu time 90.1335
+
+ACP statistics
+p = 89692478 a = 1.195343 d = 87.7393 t = 24.11092 f = 90.07759 m = 3.40368
+e = 6.518725
+
+Exact Rational Evaluation
+
+charlotte 114 % test4 ex/bull.vtk 
+tetrahedrons 365549 fenced 16 sliver 259 cpu time 74.7893
+
+ACP statistics
+p = 46037117 a = 2.867879 d = 91.85905 t = 52.05611 f = 20.36243 m = 79.63756
+e = 0 b = 600364
+
+charlotte 127 % test4 ex/ear.vtk 
+tetrahedrons 1404661 fenced 0 sliver 223 cpu time 2041.41
+
+ACP statistics
+p = 193445830 a = 2.067456 d = 94.59452 t = 1925.341 f = 2.379131 m = 97.62086
+e = 0 b = 1810577
+
+charlotte 116 % test4 ex/horse.vtk 
+tetrahedrons 786281 fenced 79 sliver 35 cpu time 101.695
+
+ACP statistics
+p = 89914918 a = 1.284936 d = 88.63556 t = 32.07142 f = 67.10876 m = 32.89123
+e = 0 b = 65680
+
+-------------------------------------------------------------------
+
+TEST 5
+
+% test57a ex/frustum ex/tworooms
+elapsed time: 419.019
+
+ACP statistics
+p = 1133790504 a = 5.101913 d = 91.11925 t = 252.2446 f = 78.83783 m = 10.26714
+e = 10.89502
+
+% test57b ex/plus ex/lattice-room
+elapsed time: 1113.87
+
+ACP statistics
+p = 1025917192 a = 22.03738 d = 75.41414 t = 703.8525 f = 60.11227 m = 22.77174
+e = 17.11597
+
+Exact Rational Evaluation
+
+test57a ex/frustum ex/tworooms
+elapsed time: 55019.9
+
+ACP statistics
+p = 1133270768 a = 5.028218 d = 91.8365 t = 54820.82 f = 0.4927811 m = 99.50721
+e = 0 b = 292091
+
+test57b ex/plus ex/lattice-room
+elapsed time: 70587.3
+
+ACP statistics
+p = 1026743110 a = 22.17159 d = 74.94824 t = 70086.54 f = 0.9065652 m = 99.09343
+e = 0
+
+-------------------------------------------------------------------
+
+TEST 6
+
+Table 3: use acp.h
+
+6a: #define HOMOTOPY_IDENTITY
+cpu time: 57.3493
+
+ACP statistics
+p = 35423161 a = 0.2460791 d = 0 t = 50.58022 f = 4.769929 m = 2.000787
+e = 93.22928 l = 95.79208 i = 95.79093 r = 60.5305
+
+6b: no #defines
+cpu time: 52.8257
+ACP statistics
+p = 35240050 a = 0.2479253 d = 0 t = 45.97284 f = 4.891017 m = 1.049934
+e = 94.05904 l = 95.91502 i = 95.91502 r = 99.99999
+
+table 4: use acp-test6.h
+
+perturbation n = 1
+cpu time: 56.8835
+ACP statistics
+p = 35423161 a = 0.2460791 d = 0 t = 47.00732 f = 0.768761 m = 1.748178
+e = 97.48306 l = 95.79208 i = 95.79093 r = 60.5305
+
+perturbation n = 2
+cpu time: 52.9508
+ACP statistics
+p = 35240050 a = 0.2479253 d = 0 t = 42.67605 f = 0.5209993 m = 0.7196681
+e = 98.75933 l = 95.91502 i = 95.91502 r = 99.99999
+
+residue n = 1
+cpu time: 19.7022
+ACP statistics
+p = 35289791 a = 0.246516 d = 95.8124 t = 9.793183 f = 9.880862 m = 20.13633
+e = 69.9828
+
+residue n = 2
+cpu time: 158.565
+ACP statistics
+p = 35411420 a = 0.2496567 d = 95.83856 t = 147.801 f = 1.430447 m = 4.777759
+e = 93.79179
+
+Exact Rational Evaluation
+
+perturbation n = 1
+cpu time: 94.796
+ACP statistics
+p = 35283877 a = 0.247178 d = 0 t = 54.53172 f = 0.6982247 m = 13.08365
+e = 86.21812 b = 797 l = 95.71399 i = 95.71399 r = 99.99999
+
+perturbation n = 2
+cpu time: 84.9236
+ACP statistics
+p = 35263076 a = 0.2476896 d = 0 t = 44.2634 f = 0.5081873 m = 1.502638
+e = 97.98917 b = 798 l = 95.72375 i = 95.72375 r = 99.99999
+
+residue n = 1
+cpu time: 155.388
+ACP statistics
+p = 35326443 a = 0.247936 d = 95.73566 t = 114.8389 f = 1.166837 m = 98.83316
+e = 0 b = 2768
+
+residue n = 2
+cpu time: 3631.57
+ACP statistics
+p = 35326443 a = 0.247936 d = 95.73566 t = 3589.844 f = 0.06487143 m = 99.93512
+e = 0 b = 2768
+
+-------------------------------------------------------------------
+
+TEST 7
+
+% test57a ex/frustum ex/tworooms
+elapsed time: 1.34856
+
+ACP statistics
+p = 223767 a = 13.25441 d = 70.09676 t = 1.23601 f = 7.429869 m = 13.18507
+e = 79.38505 l = 45.01837 i = 1.382379 r = 28.0672
+
+% test57b ex/plus ex/lattice-room
+elapsed time: 0.412629
+
+ACP statistics
+p = 116758 a = 5.478853 d = 65.40565 t = 0.3315439 f = 9.080242 m = 11.88469
+e = 79.03506 l = 20.74409 i = 0.1875879 r = 36.30763
+
+Exact Rational Evaluation
+
+% test57a ex/frustum ex/tworooms
+elapsed time: 54.5163
+
+ACP statistics
+p = 221370 a = 12.57984 d = 74.24231 t = 54.38146 f = 0.2008817 m = 30.05689
+e = 69.74222 b = 192931 l = 97.98908 i = 1.267595 r = 26.00743
+
+% test57b ex/plus ex/lattice-room
+elapsed time: 121.2855
+
+ACP statistics
+p = 116515 a = 4.916963 d = 73.03194 t = 121.1906 f = 0.02851541 m = 99.61728
+e = 0.3541965
+
+-------------------------------------------------------------------
+
+TEST 8
+
+charlotte 135 % test8 ex/r1.vtk ex/o1.vtk 
+faces: 26214; cpu time: 1.56909
+
+ACP statistics
+p = 1113233 a = 5.347128 d = 51.53042 t = 0.5965178 f = 33.14295 m = 3.507066
+e = 63.34998 l = 48.41581 i = 36.72344 r = 19.83805
+
+charlotte 136 % test8 ex/r1.vtk ex/o2.vtk 
+faces: 80068; cpu time: 5.69851
+
+ACP statistics
+p = 3953263 a = 7.445343 d = 50.48176 t = 2.390113 f = 34.54686 m = 3.109758
+e = 62.34337 l = 49.47338 i = 19.82815 r = 30.21667
+
+charlotte 137 % test8 ex/r1.vtk ex/o3.vtk 
+faces: 198810; cpu time: 14.7205
+
+ACP statistics
+p = 10909962 a = 6.439188 d = 55.99967 t = 5.902701 f = 35.63318 m = 2.557056
+e = 61.80975 l = 43.93271 i = 22.18193 r = 16.21825
+
+charlotte 138 % test8 ex/r2.vtk ex/o4.vtk 
+faces: 474888; cpu time: 92.6911
+
+ACP statistics
+p = 105131465 a = 4.690334 d = 73.9965 t = 41.29889 f = 42.49647 m = 1.920445
+e = 55.58308 l = 25.87103 i = 10.16131 r = 18.19175
+
+RESIDUE METHOD
+
+PDD Predicate Evaluation
+
+charlotte 319 % test8r3 ex/r1.vtk ex/o1.vtk 
+max precision used = 1696
+faces: 26214; cpu time: 35.8628 predicates: 3609
+time per predicate: acp 3.09157e-05 residue 0.00947347 ratio 306.428
+
+charlotte 320 % test8r3 ex/r1.vtk ex/o2.vtk 
+max precision used = 1696
+faces: 80068; cpu time: 95.4219 predicates: 7989
+time per predicate: acp 2.54297e-05 residue 0.0111924 ratio 440.131
+
+charlotte 96 % test8r3 ex/r1.vtk ex/o3.vtk 
+max precision used = 848
+faces: 198810; cpu time: 216.609 predicates: 20906
+time per predicate: acp 2.42198e-05 residue 0.00961894 ratio 397.15
+
+charlotte 322 % test8r4 ex/r1.vtk ex/o1.vtk 
+max precision used = 3392
+faces: 26214; cpu time: 1654.91 predicates: 22495
+time per predicate: acp 6.39727e-05 residue 0.0734204 ratio 1147.68
+
+Exact Predicate Evaluation
+
+charlotte 329 % test8r3 ex/r1.vtk ex/o1.vtk 
+faces: 26214; cpu time: 94.9489 predicates: 3609
+time per predicate: acp 3.03491e-05 residue 0.0256758 ratio 846.015
+
+charlotte 330 % test8r3 ex/r1.vtk ex/o2.vtk 
+faces: 80068; cpu time: 216.256 predicates: 7989
+time per predicate: acp 3.35943e-05 residue 0.026058 ratio 775.668
+
+charlotte 119 % time test8r4 ex/r1.vtk ex/o1.vtk
+predicates: 5000
+time per predicate: acp 4.65271e-05 residue 0.137097 ratio 2946.61
