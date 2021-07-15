@@ -1,6 +1,8 @@
 # ACP
 (A)daptive (C)ontrolled (P)erturbation: a numerical library for implementing Computational Geometry algorithms.
 
+Tests for "Efficient Predicate Evaluation using Probabilistic Degeneracy Detection" are in the folder pdd.
+
 # Requirements
 
 All of the code in this repository has been tested under Ubuntu 18.04 with the
