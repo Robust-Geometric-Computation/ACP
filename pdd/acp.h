@@ -413,7 +413,8 @@ class Object : public BaseObject {
   }
   
   const P<MParameter> & getM () {
-    if (pPrecision < curPrecision()) {
+    if (pPrecision < curPrecision() ||
+        (mp && !(*mp)[0].hasCurrentPrimes())) { // added
       P<MParameter> *newMp = input ? new P<MParameter>(p) :
 	new P<MParameter>(calculateMP());
       noClear(*newMp);
@@ -467,6 +468,7 @@ class Object : public BaseObject {
       }
     }
     catch (SignException se) {}
+    catch (unsigned int p) { Mods::changePrime(p); }
     curPrecision() = highPrecision;
     while (true) {
       try {
@@ -478,6 +480,7 @@ class Object : public BaseObject {
         }
       }
       catch (SignException se) {}
+      catch (unsigned int p) { Mods::changePrime(p); }
       curPrecision() *= 2u;
     }
   }
