@@ -2670,6 +2670,7 @@ bool inSet (bool ina, bool inb, SetOp op)
   case Complement:
     return ina && !inb;
   }
+  return false;
 }
 
 Polyhedron * overlay (Polyhedron **poly, int n)

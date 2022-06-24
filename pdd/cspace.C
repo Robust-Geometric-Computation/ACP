@@ -254,6 +254,7 @@ HCEdge * HCEdge::cw () const
   for (int i = 0; i < n; ++i)
     if (e->hedges[i] == this)
       return e->hedges[(i+1)%n];
+  return 0;
 }
 
 HCEdge * HCEdge::ccw () const
@@ -262,6 +263,7 @@ HCEdge * HCEdge::ccw () const
   for (int i = 0; i < n; ++i)
     if (e->hedges[i] == this)
       return e->hedges[i == 0 ? n - 1 : i - 1];
+  return 0;
 }
 
 void HCEdge::loop (HCEdges &ed)
@@ -816,6 +818,7 @@ Angles anglesFFF (CFace *f1, CFace *f2, CFace *f3)
     PTR<Object<SinCosData>> x = new PolyFFF(f1, f2, f3);
     return sinCosAngles(x, s, e, VertexSet());
   }
+  return Angles();
 }
 
 void CShell::init ()
