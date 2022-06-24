@@ -67,3 +67,7 @@ void pparReport ()
 void resetPpar ()
 {
 }
+
+unsigned long int PParameter::nModSign = 0u;
+unsigned int PParameter::nMixed = 0u;
+unsigned int PParameter::nRascal = 0u;
