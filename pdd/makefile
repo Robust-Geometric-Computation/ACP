@@ -10,6 +10,8 @@ ACPH =	par.h ppar.h mpar.h mod.h acp.h
 
 ACP = par.h par.cc ppar.h ppar.cc mpar.h mpar.cc mod.h mod.cc acp.h acp.cc	
 
+all: test1 test2 test3 test4 test57a test57b test6 test8
+
 test1:	pack.o mink.o polyhedron.o triangulate.o io.o acp.o
 	$(LINK) pack.o mink.o polyhedron.o triangulate.o io.o \
 	acp.o $(LFLAGS) -otest1
