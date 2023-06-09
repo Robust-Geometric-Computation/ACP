@@ -565,7 +565,7 @@ FreeSpaceGraph::FreeSpaceGraph(std::vector<PTRPolyhedron> & close_blockspaces, s
       prev_blockspaces.insert(prev_blockspaces.begin(), blockspaces.begin(), blockspaces.end());
       blockspaces.clear();
 
-      PTRPolyhedron ball = loadPolyVTK("sphere.vtk");
+      PTRPolyhedron ball = loadPolyVTK("ex/sphere.vtk");
       PTRPolyhedron unit_ball = ball->scale(unit);
       unit = unit * 2;
       for (int i=0; i<prev_blockspaces.size(); i++) {
@@ -609,7 +609,7 @@ FreeSpaceGraph::FreeSpaceGraph(std::vector<PTRPolyhedron> & close_blockspaces, s
       }
     }
 
-    PTRPolyhedron tmp = loadPolyVTK("sphere.vtk");
+    PTRPolyhedron tmp = loadPolyVTK("ex/sphere.vtk");
     PTRPolyhedron shrinking_sphere = tmp->scale(SHRINKING_RADIUS);
 
     cout<<"creating edges"<<endl;
