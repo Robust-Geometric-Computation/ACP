@@ -228,20 +228,12 @@ public:
   Interval () : l(0.0), u(0.0) {}
   Interval (double l, double u) : l(l), u(u) {}
   Interval (const Parameter &a) : l(a.lb()), u(a.ub()) {}
+  double lb () const { return l; }
+  double ub () const { return u; }
   double mid () const { return 0.5*(l + u); }
-
-  /*
-  Interval operator+ (const Interval &b) const {
-    return Interval(l + b.l, u + b.u);
+  bool intersects (const Interval &b) {
+    return !(ub() < b.lb() || b.ub() < lb());
   }
-
-  Interval operator* (const Interval &b) const {
-    double v[] = {l*b.l, l*b.u, u*b.l, u*b.u};
-    sort(v, v + 4);
-    return Interval(v[0], v[3]);
-  }
-  */
-
   int sign () const {
     if (l > 0.0) return 1;
     if (u < 0.0) return -1;
@@ -280,7 +272,8 @@ class Object : public BaseObject {
     if (acc == 1.0) return true;
     for (int i = 0; i < p.size(); i++) {
       double l = p[i].lb(), u = p[i].ub();  
-      if (u - l > acc*min(fabs(l), fabs(u))) {
+      if (!(acc > 1e-17 && u - l < acc*max(1.0,min(fabs(l), fabs(u)))) &&
+	  u - l > acc*min(fabs(l), fabs(u))) {
 	double ln = nextafter(l, 1.0 + u);
 	if (ln < u) {
 	  ln = nextafter(ln, 1.0 + u);
@@ -420,7 +413,8 @@ class Object : public BaseObject {
   }
   
   const P<MParameter> & getM () {
-    if (pPrecision < curPrecision()) {
+    if (pPrecision < curPrecision() ||
+        (mp && !(*mp)[0].hasCurrentPrimes())) { // added
       P<MParameter> *newMp = input ? new P<MParameter>(p) :
 	new P<MParameter>(calculateMP());
       noClear(*newMp);
@@ -474,6 +468,7 @@ class Object : public BaseObject {
       }
     }
     catch (SignException se) {}
+    catch (unsigned int p) { Mods::changePrime(p); }
     curPrecision() = highPrecision;
     while (true) {
       try {
@@ -485,6 +480,7 @@ class Object : public BaseObject {
         }
       }
       catch (SignException se) {}
+      catch (unsigned int p) { Mods::changePrime(p); }
       curPrecision() *= 2u;
     }
   }
@@ -496,8 +492,15 @@ private:
     IntervalOD (const Interval &interval) : Interval(interval) {}
     operator double() const { return 0.5*(l + u); }
   };
+  class IntervalOP : public Interval {
+  public:
+    IntervalOP () {}
+    IntervalOP (const Interval &interval) : Interval(interval) {}
+    operator Parameter() const { return Parameter(lb(), ub()); }
+  };
 public:
   P<double> getApproxMid (double acc = 1e-17) { return P<IntervalOD>(getApprox(acc)); }
+  P<Parameter> getApproxParameter (double acc = 1e-17) { return P<IntervalOP>(getApprox(acc)); }
 };
 
 class Primitive : public BaseObject {
@@ -578,6 +581,7 @@ class Primitive : public BaseObject {
       }
     }
 #ifdef NO_HOMOTOPY
+    cerr << "max precision exceeded!" << endl;
     curPrecision() = cp;
     return 0;
 #endif
