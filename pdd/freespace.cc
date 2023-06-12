@@ -11,8 +11,9 @@ double tanHalfAngle (int n) {
 PTR<Polyhedron> loadPoly_VTK(const char * filename, bool perturbed) {
   int n = strlen(filename);
   char str[n+5];
-  strncpy(str, filename, n);
-  strncpy(str+n, ".vtk", 5);
+  strcpy(str, filename);
+  //strncpy(str+n, ".vtk", 5);
+  strcpy(str+n, ".vtk");
 
   PTR<Polyhedron> poly;
   ifstream infile (str);
@@ -30,8 +31,9 @@ PTR<Polyhedron> loadPoly_VTK(const char * filename, bool perturbed) {
 void savePoly_VTK(PTR<Polyhedron> p, const char * filename) {
   int n = strlen(filename);
   char str[n+9];
-  strncpy(str, filename, n);
-  strncpy(str+n, "-out.vtk", 9);
+  strcpy(str, filename);
+  // strncpy(str+n, "-out.vtk", 9);
+  strcpy(str+n, "-out.vtk");
 
 #ifdef NOFILE
   extern void savePoly(PTR<Polyhedron> p, const char *filename);
